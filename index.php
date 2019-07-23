@@ -1116,7 +1116,7 @@ session_start();
 
          <input class="form-control" name="facebook" id="facebook" type="hidden" placeholder="ไอดีเข้าสู่ระบบ">
 
-       <input class="form-control" name="facebook_picture" id="facebook_picture" type="text" placeholder="ไอดีเข้าสู่ระบบ">
+       <input class="form-control" name="facebook_picture" id="facebook_picture" type="hidden" placeholder="ไอดีเข้าสู่ระบบ">
 
           <input  class="form-control" name="username" id="username" placeholder="ไอดีเข้าสู่ระบบ">
           <span id="alert-username-register"></span>
