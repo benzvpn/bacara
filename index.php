@@ -110,40 +110,25 @@ content="948989893595-bcbuipg8k26s5djlrt7nkikqs40ov87o.apps.googleusercontent.co
                    ?>
                    <form onsubmit="signOut();" class="login-form after-login blockstyle">
                     <div class="user-image">
+
                       <?php
-                      if ($_SESSION["profile_img"] == "") {
-                        echo '<img id="profile-img-tag" src="src/images/Blank-Profile.png">';
-                      } else {
-
-
-                        if (strpos($_SESSION["profile_img"], 'googleusercontent') !== false || strpos($_SESSION["profile_img"], 'fbsbx')) {
-
-
-                          ?>
-
-                                      <img id="profile-img-tag" src="<?php echo $_SESSION["profile_img"]?>">
-
-                          <?php
-
-                        }else{
-
-                            ?>
-
-                              <img id="profile-img-tag" src="src/images/userimages/<?php echo $_SESSION["profile_img"]?>">
-
-                              <?php
-                        }
+                    if ($_SESSION["profile_img"] == "") {
+                      echo '<img src="src/images/Blank-Profile.png">';
+                      
+                    } else {
+                        ?>
 
 
 
+                       <img src="src/images/userimages/<?php echo $_SESSION["profile_img"]?>">
 
 
 
+                      <?php
 
+                    }
+                    ?>
 
-
-                      }
-                      ?>
                     </div>
                     <label for="uname"><b>ผู้ใช้งาน :</b></label>
                     <label for="uname"><b>
@@ -1176,25 +1161,13 @@ content="948989893595-bcbuipg8k26s5djlrt7nkikqs40ov87o.apps.googleusercontent.co
             <?php
             if ($_SESSION["profile_img"] == "") {
               echo '<img id="profile-img-tag" src="src/images/Blank-Profile.png">';
+
             } else {
-
-
-              if (strpos($_SESSION["profile_img"], 'googleusercontent') !== false || strpos($_SESSION["profile_img"], 'fbsbx')) {
-
-
                 ?>
 
-                            <img id="profile-img-tag" src="<?php echo $_SESSION["profile_img"]?>">
-
-                <?php
-
-              }else{
-
-              }
-              ?>
 
 
-                          <img id="profile-img-tag" src="src/images/userimages/<?php echo $_SESSION["profile_img"]?>">
+               <img id="profile-img-tag" src="src/images/userimages/<?php echo $_SESSION["profile_img"]?>">
 
 
 
@@ -1416,23 +1389,23 @@ function checkReqFields() {
         // $("#fblogin").click();
     });
 
-    $(document).on('click', '#btnGoogle', function(){ 
-        alert("g");
-        // fb_login();
-        $("#google_signin").click();
-    });
+    // $(document).on('click', '#btnGoogle', function(){ 
+    //     alert("g");
+    //     // fb_login();
+    //     $("#google_signin").click();
+    // });
 
-      function renderButton() {
-      gapi.signin2.render('my-signin2', {
-        'scope': 'profile email',
-        'width': 240,
-        'height': 50,
-        'longtitle': true,
-        'theme': 'dark',
-        'onsuccess': onSuccess,
-        'onfailure': onFailure
-      });
-    }
+    //   function renderButton() {
+    //   gapi.signin2.render('my-signin2', {
+    //     'scope': 'profile email',
+    //     'width': 240,
+    //     'height': 50,
+    //     'longtitle': true,
+    //     'theme': 'dark',
+    //     'onsuccess': onSuccess,
+    //     'onfailure': onFailure
+    //   });
+    // }
 
 
 

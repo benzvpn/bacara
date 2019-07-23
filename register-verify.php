@@ -19,6 +19,8 @@ include('./env/config.php');
 		$nickname = $objCon->real_escape_string($_POST['nickname']);
 
 
+
+
 		if ($username == "" || $email == "" || $password != $cPassword) {
 			$msg = "Please check your inputs";
 		}else {
@@ -45,12 +47,18 @@ include('./env/config.php');
 				if($facebook=="true"){
 
 
+					$url = $facebook_picture;
+					$length = 10;   
+
+					$img_name = strtolower(substr(str_shuffle('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'),1,$length)).".jpg";
+
+					$img = './src/images/userimages/'.$img_name;
+					file_put_contents($img, file_get_contents($url));
+
+
 			
 
-
-
-
-								$query ="INSERT INTO member (Username_member, Password_member, credit, phone_member, line, status_approve, role, start_date, end_date, ref, date_remain, profile_img, line_img, 	nickname, 	email, verify_token, salt_password) VALUES ('$username', '$hashedPassword' , '0', '$phonenumber', '', '1', 'user', '', '', '', '', '$facebook_picture', '', '$nickname', '$email', '$token', '$salt')";
+								$query ="INSERT INTO member (Username_member, Password_member, credit, phone_member, line, status_approve, role, start_date, end_date, ref, date_remain, profile_img, line_img, 	nickname, 	email, verify_token, salt_password) VALUES ('$username', '$hashedPassword' , '0', '$phonenumber', '', '1', 'user', '', '', '', '', '$img_name', '', '$nickname', '$email', '$token', '$salt')";
 								if ($queryresult = mysqli_query($objCon,$query)) {
 
 									echo "<script>alert('register successfully');document.location='index.php'</script>";
