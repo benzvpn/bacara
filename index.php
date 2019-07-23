@@ -40,7 +40,7 @@ session_start();
 
               
         }, function(error) {
-          alert(JSON.stringify(error, undefined, 2));
+          // alert(JSON.stringify(error, undefined, 2));
         });
   }
   </script>
@@ -278,7 +278,7 @@ session_start();
                      
                       <div id="customBtn" class="btn btn-block btn-social btn-google customGPlusSignIn">
                         <span class="fab fa-google" style="color:white;font-size:17px"></span>
-                          <font color="white" size="2"> เข้าสู่ระบบด้วย Google </font>
+                          <font color="white" size="2"><center> เข้าสู่ระบบด้วย Google </center></font>
                       </div>
                     </div>
                     <div id="name"></div>
@@ -288,7 +288,7 @@ session_start();
                          <div style="margin-top:5px;">
                         <a class="btn btn-block btn-social btn-facebook" id="btnClick">
                         <span class="fab fa-facebook-f" style="color:white;font-size:16px"></span>
-                        <font color="white" size="2"> เข้าสู่ระบบด้วย Facebook </font>
+                        <font color="white" size="2"><center> เข้าสู่ระบบด้วย Facebook </center></font>
                         </a>
                        </div> 
               
