@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
 include('./env/config.php');
 error_reporting(0);
 session_start();
